@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/niroigensuntharam/CLionProjects/GA1/ea.cpp
+ea.h
+/Users/niroigensuntharam/CLionProjects/GA1/ea.h
+
+/Users/niroigensuntharam/CLionProjects/GA1/ea.h
+individual.h
+/Users/niroigensuntharam/CLionProjects/GA1/individual.h
+helper.h
+/Users/niroigensuntharam/CLionProjects/GA1/helper.h
+cstdlib
+-
+algorithm
+-
+random
+-
+algorithm
+-
+array
+-
+
+/Users/niroigensuntharam/CLionProjects/GA1/helper.h
+cmath
+-
+stdlib.h
+-
+iostream
+-
+
+/Users/niroigensuntharam/CLionProjects/GA1/individual.h
+helper.h
+/Users/niroigensuntharam/CLionProjects/GA1/helper.h
+

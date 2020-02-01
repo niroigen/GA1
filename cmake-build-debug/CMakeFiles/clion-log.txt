@@ -1,0 +1,8 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/niroigensuntharam/CLionProjects/GA1
+-- Configuring done
+CMake Error at CMakeLists.txt:7 (add_executable):
+  Target "GA1" links to itself.
+
+
+-- Generating done
+CMake Generate step failed.  Build files cannot be regenerated correctly.
