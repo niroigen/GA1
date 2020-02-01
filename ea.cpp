@@ -16,6 +16,8 @@ void EA::evaluate_population()
         total_fitness = population[i].get_fitness() + total_fitness;
     }
 
+    average[COUNTER] = total_fitness / POPULATION_SIZE;
+
     for (int i = 0; i < POPULATION_SIZE; i++)
     {
         population[i].set_probability_of_choosing_individual(population[i].get_fitness() / total_fitness);
@@ -163,12 +165,14 @@ void EA::mergeSort(int l, int r)
 void EA::next_generation_selection()
 {
     EA::mergeSort(0, POPULATION_SIZE - 1);
-    std::cout << "GENERATION " << COUNTER + 1<< std::endl << "BEST " << population[0].get_fitness() << std::endl << std::endl;
+//    std::cout << "GENERATION " << COUNTER + 1<< std::endl << "BEST " << population[0].get_fitness() << std::endl << std::endl;
 
-    if (max_fitness < population[0].get_fitness())
+    if (current_max_fitness < population[0].get_fitness())
     {
-        max_fitness = population[0].get_fitness();
+        current_max_fitness = population[0].get_fitness();
     }
+
+    max_fitness[COUNTER] = current_max_fitness;
 
     int idx = 0;
 

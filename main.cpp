@@ -15,7 +15,7 @@ int main() {
         ea.mutation();
         ea.next_generation_selection();
         ea.evaluate_population();
-    } while(!ea.should_terminate());
+    } while(!EA::should_terminate());
 
     return 0;
 }

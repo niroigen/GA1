@@ -13,7 +13,6 @@ static const int POPULATION_SIZE = 1000;
 static const int MAX_PARENT_SIZE = 200;
 static const int MAX_OFFSPRING_SIZE = 400;
 static int COUNTER = 0;
-static float max_fitness = 0;
 static const int MAX_GENERATIONS = 10000;
 
 class EA
@@ -23,10 +22,9 @@ private:
     std::array<Individual,MAX_PARENT_SIZE> parents;
     std::array<Individual,MAX_OFFSPRING_SIZE> offsprings;
     unsigned int seed;
-    float mean_average;
-    float standard_deviation_average;
-    float mean_max;
-    float standard_deviation_max;
+    std::array<float, MAX_GENERATIONS + 1> average;
+    std::array<float, MAX_GENERATIONS + 1> max_fitness;
+    float current_max_fitness = 0;
     void merge(int l, int m, int r);
 
 public:
