@@ -8,6 +8,7 @@
 #include <random>
 #include <algorithm>
 #include <array>
+#include <fstream>
 
 static const int POPULATION_SIZE = 1000;
 static const int MAX_PARENT_SIZE = 200;

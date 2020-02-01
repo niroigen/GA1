@@ -25,6 +25,8 @@ algorithm
 -
 array
 -
+fstream
+-
 
 /Users/niroigensuntharam/CLionProjects/GA1/helper.h
 cmath

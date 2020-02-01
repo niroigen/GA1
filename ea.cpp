@@ -16,7 +16,11 @@ void EA::evaluate_population()
         total_fitness = population[i].get_fitness() + total_fitness;
     }
 
+    std::ofstream myfile;
+    myfile.open ("average.txt", std::ios::app);
     average[COUNTER] = total_fitness / POPULATION_SIZE;
+    myfile << average[COUNTER] << "\n";
+    myfile.close();
 
     for (int i = 0; i < POPULATION_SIZE; i++)
     {
@@ -59,7 +63,7 @@ void EA::recombination()
         float new_x1 = parent1.get_x1() * (parent1.get_fitness() / total_weight) + parent2.get_x1() * (parent2.get_fitness() / total_weight);
         float new_x2 = parent1.get_x2() * (parent1.get_fitness() / total_weight) + parent2.get_x2() * (parent2.get_fitness() / total_weight);
 
-        offsprings[i] = Individual(new_x1, new_x2);        
+        offsprings[i] = Individual(new_x1, new_x2);
     }
 }
 
@@ -172,7 +176,11 @@ void EA::next_generation_selection()
         current_max_fitness = population[0].get_fitness();
     }
 
+    std::ofstream myfile;
+    myfile.open ("max.txt", std::ios::app);
     max_fitness[COUNTER] = current_max_fitness;
+    myfile << max_fitness[COUNTER] << "\n";
+    myfile.close();
 
     int idx = 0;
 
