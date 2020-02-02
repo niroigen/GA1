@@ -14,13 +14,13 @@ private:
 public:
     Individual() {};
     Individual(float x1, float x2);
-    float get_fitness();
-    float get_x1();
-    float get_x2();
-    void set_x1(float x1);
-    void set_x2(float x2);
-    void set_probability_of_choosing_individual(float percentage);
-    float get_probability_of_choosing_individual();
+    float getFitness();
+    float getX1();
+    float getX2();
+    void setX1(float x1);
+    void setX2(float x2);
+    void setProbabilityOfChoosingIndividual(float percentage);
+    float getProbabilityOfChoosingIndividual();
 };
 
 #endif

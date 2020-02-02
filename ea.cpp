@@ -13,7 +13,7 @@ void EA::EvaluatePopulation()
     float total_fitness = 0;
     for (int i = 0; i < POPULATION_SIZE; i++)
     {
-        total_fitness = population[i].get_fitness() + total_fitness;
+        total_fitness = population[i].getFitness() + total_fitness;
     }
 
     std::ofstream myfile;
@@ -24,7 +24,7 @@ void EA::EvaluatePopulation()
 
     for (int i = 0; i < POPULATION_SIZE; i++)
     {
-        population[i].set_probability_of_choosing_individual(population[i].get_fitness() / total_fitness);
+        population[i].setProbabilityOfChoosingIndividual(population[i].getFitness() / total_fitness);
     }
 }
 
@@ -37,7 +37,7 @@ void EA::ParentSelection()
 
         for(int j = 0; j < POPULATION_SIZE; j++)
         {
-            current_roll += population[j].get_probability_of_choosing_individual();
+            current_roll += population[j].getProbabilityOfChoosingIndividual();
             
             if (random_roll < current_roll)
             {
@@ -58,10 +58,12 @@ void EA::Recombination()
         Individual parent1 = parents[parent_1_index];
         Individual parent2 = parents[parent_2_index];
 
-        float total_weight = parent1.get_fitness() + parent2.get_fitness();
+        float total_weight = parent1.getFitness() + parent2.getFitness();
 
-        float new_x1 = parent1.get_x1() * (parent1.get_fitness() / total_weight) + parent2.get_x1() * (parent2.get_fitness() / total_weight);
-        float new_x2 = parent1.get_x2() * (parent1.get_fitness() / total_weight) + parent2.get_x2() * (parent2.get_fitness() / total_weight);
+        float new_x1 = parent1.getX1() * (parent1.getFitness() / total_weight) +
+                parent2.getX1() * (parent2.getFitness() / total_weight);
+        float new_x2 = parent1.getX2() * (parent1.getFitness() / total_weight) +
+                parent2.getX2() * (parent2.getFitness() / total_weight);
 
         offsprings[i] = Individual(new_x1, new_x2);
     }
@@ -78,8 +80,8 @@ void EA::Mutation()
             float new_x1 = Helper::randomX1();
             float new_x2 = Helper::randomX2();
 
-            offsprings[i].set_x1((offsprings[i].get_x1() + new_x1) / 2);
-            offsprings[i].set_x2((offsprings[i].get_x2() + new_x2) / 2);
+            offsprings[i].setX1((offsprings[i].getX1() + new_x1) / 2);
+            offsprings[i].setX2((offsprings[i].getX2() + new_x2) / 2);
         }
     }
 }
@@ -115,7 +117,7 @@ void EA::Merge(int l, int m, int r)
     k = l; // Initial index of merged subarray 
     while (i < n1 && j < n2) 
     { 
-        if (L[i].get_fitness() >= R[j].get_fitness()) 
+        if (L[i].getFitness() >= R[j].getFitness())
         {
             population[k] = L[i];
             i++; 
@@ -169,17 +171,17 @@ void EA::MergeSort(int l, int r)
 void EA::NextGenerationSelection()
 {
     EA::MergeSort(0, POPULATION_SIZE - 1);
-//    std::cout << "GENERATION " << COUNTER + 1<< std::endl << "BEST " << population[0].get_fitness() << std::endl << std::endl;
+//    std::cout << "GENERATION " << COUNTER + 1<< std::endl << "BEST " << population[0].getFitness() << std::endl << std::endl;
 
-    if (currentMaxFitness < population[0].get_fitness())
+    if (currentMaxFitness < population[0].getFitness())
     {
-        currentMaxFitness = population[0].get_fitness();
+        currentMaxFitness = population[0].getFitness();
     }
 
     std::ofstream myfile;
     myfile.open ("max.txt", std::ios::app);
     maxFitness[COUNTER] = currentMaxFitness;
-    myfile << maxFitness[COUNTER] << "\t" << population[0].get_x1() << "\t" << population[0].get_x2() << "\n";
+    myfile << maxFitness[COUNTER] << "\t" << population[0].getX1() << "\t" << population[0].getX2() << "\n";
     myfile.close();
 
     int idx = 0;
