@@ -28,6 +28,10 @@ array
 fstream
 -
 
+/Users/niroigensuntharam/CLionProjects/GA1/helper.cpp
+helper.h
+/Users/niroigensuntharam/CLionProjects/GA1/helper.h
+
 /Users/niroigensuntharam/CLionProjects/GA1/helper.h
 cmath
 -
@@ -36,7 +40,17 @@ stdlib.h
 iostream
 -
 
+/Users/niroigensuntharam/CLionProjects/GA1/individual.cpp
+individual.h
+/Users/niroigensuntharam/CLionProjects/GA1/individual.h
+
 /Users/niroigensuntharam/CLionProjects/GA1/individual.h
 helper.h
 /Users/niroigensuntharam/CLionProjects/GA1/helper.h
+
+/Users/niroigensuntharam/CLionProjects/GA1/main.cpp
+iostream
+-
+ea.h
+/Users/niroigensuntharam/CLionProjects/GA1/ea.h
 
