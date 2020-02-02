@@ -47,14 +47,26 @@ void EA::Recombination() {
         Individual parent1 = parents[parent_1_index];
         Individual parent2 = parents[parent_2_index];
 
-        float total_weight = parent1.getFitness() + parent2.getFitness();
+        double random_roll = (double) rand() / (RAND_MAX);
 
-        float new_x1 = parent1.getX1() * (parent1.getFitness() / total_weight) +
-                       parent2.getX1() * (parent2.getFitness() / total_weight);
-        float new_x2 = parent1.getX2() * (parent1.getFitness() / total_weight) +
-                       parent2.getX2() * (parent2.getFitness() / total_weight);
+        if (random_roll < RECOMBINATION_RATE) {
+            float total_weight = parent1.getFitness() + parent2.getFitness();
 
-        offsprings[i] = Individual(new_x1, new_x2);
+            float new_x1 = parent1.getX1() * (parent1.getFitness() / total_weight) +
+                           parent2.getX1() * (parent2.getFitness() / total_weight);
+            float new_x2 = parent1.getX2() * (parent1.getFitness() / total_weight) +
+                           parent2.getX2() * (parent2.getFitness() / total_weight);
+
+            offsprings[i] = Individual(new_x1, new_x2);
+        } else {
+            double chosen_parent = (double) rand() / (RAND_MAX);
+
+            if (chosen_parent < 0.5) {
+                offsprings[i] = Individual(parent1.getX1(), parent1.getX2());
+            } else {
+                offsprings[i] = Individual(parent2.getX1(), parent2.getX2());
+            }
+        }
     }
 }
 
