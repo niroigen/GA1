@@ -31,7 +31,7 @@ private:
     void Merge(int l, int m, int r);
 
 public:
-    EA(unsigned int seed) : seed(seed) { srand(seed); }
+    EA(int seed) : seed(seed) {}
 
     void InitializePopulation();
 
