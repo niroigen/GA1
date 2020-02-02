@@ -1,14 +1,14 @@
 #include "ea.h"
 
-void EA::initialize_population()
+void EA::InitializePopulation()
 {
     for (int i = 0; i < POPULATION_SIZE; i++)
     {
-        population[i] = Individual(Helper::random_x1(), Helper::random_x2());
+        population[i] = Individual(Helper::randomX1(), Helper::randomX2());
     }
 }
 
-void EA::evaluate_population()
+void EA::EvaluatePopulation()
 {
     float total_fitness = 0;
     for (int i = 0; i < POPULATION_SIZE; i++)
@@ -28,7 +28,7 @@ void EA::evaluate_population()
     }
 }
 
-void EA::parent_selection()
+void EA::ParentSelection()
 {
     for(int i = 0; i < MAX_PARENT_SIZE; i++)
     {
@@ -48,7 +48,7 @@ void EA::parent_selection()
     }
 }
 
-void EA::recombination()
+void EA::Recombination()
 {
     for(int i = 0; i < MAX_OFFSPRING_SIZE; i++)
     {
@@ -67,7 +67,7 @@ void EA::recombination()
     }
 }
 
-void EA::mutation()
+void EA::Mutation()
 {
     for(int i = 0; i < MAX_OFFSPRING_SIZE; i++)
     {
@@ -75,8 +75,8 @@ void EA::mutation()
 
         if (random_roll < 0.2)
         {
-            float new_x1 = Helper::random_x1();
-            float new_x2 = Helper::random_x2();
+            float new_x1 = Helper::randomX1();
+            float new_x2 = Helper::randomX2();
 
             offsprings[i].set_x1((offsprings[i].get_x1() + new_x1) / 2);
             offsprings[i].set_x2((offsprings[i].get_x2() + new_x2) / 2);
@@ -85,7 +85,7 @@ void EA::mutation()
 }
 
 // Shuffle array
-void EA::shuffle_array()
+void EA::ShuffleArray()
 {
     // To obtain a time-based seed
     unsigned seed = 0;
@@ -94,7 +94,7 @@ void EA::shuffle_array()
     shuffle(population.begin(), population.end(), std::default_random_engine(seed));
 }
 
-void EA::merge(int l, int m, int r)
+void EA::Merge(int l, int m, int r)
 { 
     int i, j, k; 
     int n1 = m - l + 1;
@@ -149,7 +149,7 @@ void EA::merge(int l, int m, int r)
   
 /* l is for left index and r is right index of the 
    sub-array of arr to be sorted */
-void EA::mergeSort(int l, int r)
+void EA::MergeSort(int l, int r)
 {
 
     if (l < r) 
@@ -159,27 +159,27 @@ void EA::mergeSort(int l, int r)
         int m = l+(r-l)/2; 
   
         // Sort first and second halves 
-        mergeSort(l, m);
-        mergeSort(m+1, r);
-  
-        merge(l, m, r);
+        MergeSort(l, m);
+        MergeSort(m + 1, r);
+
+        Merge(l, m, r);
     } 
 }
 
-void EA::next_generation_selection()
+void EA::NextGenerationSelection()
 {
-    EA::mergeSort(0, POPULATION_SIZE - 1);
+    EA::MergeSort(0, POPULATION_SIZE - 1);
 //    std::cout << "GENERATION " << COUNTER + 1<< std::endl << "BEST " << population[0].get_fitness() << std::endl << std::endl;
 
-    if (current_max_fitness < population[0].get_fitness())
+    if (currentMaxFitness < population[0].get_fitness())
     {
-        current_max_fitness = population[0].get_fitness();
+        currentMaxFitness = population[0].get_fitness();
     }
 
     std::ofstream myfile;
     myfile.open ("max.txt", std::ios::app);
-    max_fitness[COUNTER] = current_max_fitness;
-    myfile << max_fitness[COUNTER] << "\n";
+    maxFitness[COUNTER] = currentMaxFitness;
+    myfile << maxFitness[COUNTER] << "\t" << population[0].get_x1() << "\t" << population[0].get_x2() << "\n";
     myfile.close();
 
     int idx = 0;
@@ -189,10 +189,10 @@ void EA::next_generation_selection()
         population[i] = offsprings[idx++];
     }
 
-    shuffle_array();
+    ShuffleArray();
 }
 
-bool EA::should_terminate()
+bool EA::ShouldTerminate()
 {
     return COUNTER++ == MAX_GENERATIONS;
 }

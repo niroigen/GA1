@@ -4,7 +4,7 @@ Individual::Individual(float x1, float x2)
 {
     this->x1 = x1;
     this->x2 = x2;
-    this->fitness = Helper::function_output(x1, x2);
+    this->fitness = Helper::functionOutput(x1, x2);
 }
 
 float Individual::get_fitness()
@@ -30,7 +30,7 @@ void Individual::set_x1(float x1)
 void Individual::set_x2(float x2)
 {
     this->x2 = x2;
-    this->fitness = Helper::function_output(x1, x2);
+    this->fitness = Helper::functionOutput(x1, x2);
 }
 
 void Individual::set_probability_of_choosing_individual(float percentage)

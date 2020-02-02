@@ -1,21 +1,21 @@
 #include <iostream>
 #include "ea.h"
 
-static const unsigned int SEED = 100;
+static const unsigned int SEED = 200;
 
 int main() {
     EA ea(SEED);
 
-    ea.initialize_population();
-    ea.evaluate_population();
+    ea.InitializePopulation();
+    ea.EvaluatePopulation();
 
     do{
-        ea.parent_selection();
-        ea.recombination();
-        ea.mutation();
-        ea.next_generation_selection();
-        ea.evaluate_population();
-    } while(!EA::should_terminate());
+        ea.ParentSelection();
+        ea.Recombination();
+        ea.Mutation();
+        ea.NextGenerationSelection();
+        ea.EvaluatePopulation();
+    } while(!EA::ShouldTerminate());
 
     return 0;
 }
