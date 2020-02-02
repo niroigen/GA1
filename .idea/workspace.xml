@@ -13,7 +13,12 @@
   <component name="ChangeListManager">
     <list default="true" id="21b0ea78-4024-4914-aaae-04a374e0c917" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GA1.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GA1.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GA1.dir/ea.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GA1.dir/ea.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GA1.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GA1.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/GA1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/GA1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ea.h" beforeDir="false" afterPath="$PROJECT_DIR$/ea.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +69,7 @@
       <updated>1580538130670</updated>
       <workItem from="1580538132689" duration="10736000" />
       <workItem from="1580613334378" duration="1906000" />
-      <workItem from="1580662169577" duration="6216000" />
+      <workItem from="1580662169577" duration="6772000" />
     </task>
     <servers />
   </component>
@@ -76,22 +81,22 @@
       <screen x="0" y="23" width="1440" height="794" />
     </state>
     <state width="522" height="466" key="DebuggerActiveHint/0.23.1440.794@0.23.1440.794" timestamp="1580580328613" />
-    <state width="1378" height="196" key="GridCell.Tab.0.bottom" timestamp="1580674246116">
+    <state width="1378" height="196" key="GridCell.Tab.0.bottom" timestamp="1580675208563">
       <screen x="0" y="23" width="1440" height="794" />
     </state>
-    <state width="1378" height="196" key="GridCell.Tab.0.bottom/0.23.1440.794@0.23.1440.794" timestamp="1580674246116" />
-    <state width="1378" height="196" key="GridCell.Tab.0.center" timestamp="1580674246115">
+    <state width="1378" height="196" key="GridCell.Tab.0.bottom/0.23.1440.794@0.23.1440.794" timestamp="1580675208563" />
+    <state width="1378" height="196" key="GridCell.Tab.0.center" timestamp="1580675208561">
       <screen x="0" y="23" width="1440" height="794" />
     </state>
-    <state width="1378" height="196" key="GridCell.Tab.0.center/0.23.1440.794@0.23.1440.794" timestamp="1580674246115" />
-    <state width="1378" height="196" key="GridCell.Tab.0.left" timestamp="1580674246115">
+    <state width="1378" height="196" key="GridCell.Tab.0.center/0.23.1440.794@0.23.1440.794" timestamp="1580675208561" />
+    <state width="1378" height="196" key="GridCell.Tab.0.left" timestamp="1580675208561">
       <screen x="0" y="23" width="1440" height="794" />
     </state>
-    <state width="1378" height="196" key="GridCell.Tab.0.left/0.23.1440.794@0.23.1440.794" timestamp="1580674246115" />
-    <state width="1378" height="196" key="GridCell.Tab.0.right" timestamp="1580674246116">
+    <state width="1378" height="196" key="GridCell.Tab.0.left/0.23.1440.794@0.23.1440.794" timestamp="1580675208561" />
+    <state width="1378" height="196" key="GridCell.Tab.0.right" timestamp="1580675208562">
       <screen x="0" y="23" width="1440" height="794" />
     </state>
-    <state width="1378" height="196" key="GridCell.Tab.0.right/0.23.1440.794@0.23.1440.794" timestamp="1580674246116" />
+    <state width="1378" height="196" key="GridCell.Tab.0.right/0.23.1440.794@0.23.1440.794" timestamp="1580675208562" />
     <state width="1378" height="236" key="GridCell.Tab.1.bottom" timestamp="1580669941337">
       <screen x="0" y="23" width="1440" height="794" />
     </state>

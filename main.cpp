@@ -1,7 +1,7 @@
 #include <iostream>
 #include "ea.h"
 
-static const unsigned int SEED = 200;
+static const unsigned int SEED = 17;
 
 int main() {
     EA ea(SEED);
