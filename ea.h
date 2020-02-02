@@ -15,7 +15,7 @@ static const int MAX_PARENT_SIZE = 100;
 static const int MAX_OFFSPRING_SIZE = 400;
 static int COUNTER = 0;
 static const int MAX_GENERATIONS = 5000;
-static const float MUTATION_RATE = 0.15;
+static const float MUTATION_RATE = 0.25;
 
 class EA {
 private:
