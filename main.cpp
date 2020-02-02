@@ -9,13 +9,13 @@ int main() {
     ea.InitializePopulation();
     ea.EvaluatePopulation();
 
-    do{
+    do {
         ea.ParentSelection();
         ea.Recombination();
         ea.Mutation();
         ea.NextGenerationSelection();
         ea.EvaluatePopulation();
-    } while(!EA::ShouldTerminate());
+    } while (!EA::ShouldTerminate());
 
     return 0;
 }

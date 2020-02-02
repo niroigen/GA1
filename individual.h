@@ -3,8 +3,7 @@
 
 #include "helper.h"
 
-class Individual
-{
+class Individual {
 private:
     float x1; // -12.0 to 12.0
     float x2; // -6.0 to 6.0
@@ -13,13 +12,21 @@ private:
 
 public:
     Individual() {};
+
     Individual(float x1, float x2);
+
     float getFitness();
+
     float getX1();
+
     float getX2();
+
     void setX1(float x1);
+
     void setX2(float x2);
+
     void setProbabilityOfChoosingIndividual(float percentage);
+
     float getProbabilityOfChoosingIndividual();
 };
 
