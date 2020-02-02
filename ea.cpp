@@ -62,7 +62,7 @@ void EA::Mutation() {
     for (int i = 0; i < MAX_OFFSPRING_SIZE; i++) {
         double random_roll = (double) rand() / (RAND_MAX);
 
-        if (random_roll < 0.2) {
+        if (random_roll < MUTATION_RATE) {
             float new_x1 = Helper::randomX1();
             float new_x2 = Helper::randomX2();
 
