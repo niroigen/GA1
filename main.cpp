@@ -4,7 +4,8 @@
 static const unsigned int SEED = 17;
 
 int main() {
-    EA ea(SEED);
+    srand(time(NULL));
+    EA ea;
 
     ea.InitializePopulation();
     ea.EvaluatePopulation();
