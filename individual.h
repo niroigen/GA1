@@ -8,7 +8,7 @@ class Individual
 private:
     float x1; // -12.0 to 12.0
     float x2; // -6.0 to 6.0
-    float percent_of_being_chosen;
+    float percentOfBeingChosen;
     float fitness; // a value between 0 to 1
 
 public:

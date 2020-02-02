@@ -35,10 +35,10 @@ void Individual::setX2(float x2)
 
 void Individual::setProbabilityOfChoosingIndividual(float percentage)
 {
-    this->percent_of_being_chosen = percentage;
+    this->percentOfBeingChosen = percentage;
 }
 
 float Individual::getProbabilityOfChoosingIndividual()
 {
-    return percent_of_being_chosen;
+    return percentOfBeingChosen;
 }
