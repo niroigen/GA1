@@ -14,7 +14,6 @@ int main() {
         std::cout << i << std::endl;
         srand(i);
         EA ea(i);
-
         ea.InitializePopulation();
         ea.EvaluatePopulation();
 
