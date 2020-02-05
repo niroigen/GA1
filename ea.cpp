@@ -13,9 +13,9 @@ void EA::EvaluatePopulation() {
     }
 
     std::ofstream myfile;
-    myfile.open("average.txt", std::ios::app);
-    average[COUNTER] = total_fitness / POPULATION_SIZE;
-    myfile << average[COUNTER] << "\n";
+    myfile.open("average_" + std::to_string(seed) + ".txt", std::ios::app);
+    average[currentGeneration] = total_fitness / POPULATION_SIZE;
+    myfile << average[currentGeneration] << "\n";
     myfile.close();
 
     for (int i = 0; i < POPULATION_SIZE; i++) {
@@ -165,9 +165,9 @@ void EA::NextGenerationSelection() {
     }
 
     std::ofstream myfile;
-    myfile.open("max.txt", std::ios::app);
-    maxFitness[COUNTER] = currentMaxFitness;
-    myfile << maxFitness[COUNTER] << "\t" << population[0].getX1() << "\t" << population[0].getX2() << "\n";
+    myfile.open("max_" + std::to_string(seed) + ".txt", std::ios::app);
+    maxFitness[currentGeneration] = currentMaxFitness;
+    myfile << maxFitness[currentGeneration] << "\t" << population[0].getX1() << "\t" << population[0].getX2() << "\n";
     myfile.close();
 
     int idx = 0;
@@ -180,5 +180,5 @@ void EA::NextGenerationSelection() {
 }
 
 bool EA::ShouldTerminate() {
-    return COUNTER++ == MAX_GENERATIONS;
+    return currentGeneration++ == MAX_GENERATIONS;
 }

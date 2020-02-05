@@ -13,10 +13,9 @@
 static const int POPULATION_SIZE = 1000;
 static const int MAX_PARENT_SIZE = 100;
 static const int MAX_OFFSPRING_SIZE = 200;
-static int COUNTER = 0;
 static const int MAX_GENERATIONS = 5000;
-static const float MUTATION_RATE = 0.4;
-static const float RECOMBINATION_RATE = 1;
+static const float MUTATION_RATE = 0.6;
+static const float RECOMBINATION_RATE = 0.8;
 
 class EA {
 private:
@@ -27,11 +26,12 @@ private:
     std::array<float, MAX_GENERATIONS + 1> average;
     std::array<float, MAX_GENERATIONS + 1> maxFitness;
     float currentMaxFitness = 0;
+    int currentGeneration = 0;
 
     void Merge(int l, int m, int r);
 
 public:
-    EA() {}
+    EA(int seed) : seed(seed) {}
 
     void InitializePopulation();
 
@@ -45,7 +45,7 @@ public:
 
     void NextGenerationSelection();
 
-    static bool ShouldTerminate();
+    bool ShouldTerminate();
 
     void ShuffleArray();
 

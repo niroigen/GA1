@@ -4,19 +4,21 @@
 static const unsigned int SEED = 17;
 
 int main() {
-    srand(time(NULL));
-    EA ea;
+    for (int i = 0; i < 15; i++) {
+        srand(i);
+        EA ea(i);
 
-    ea.InitializePopulation();
-    ea.EvaluatePopulation();
-
-    do {
-        ea.ParentSelection();
-        ea.Recombination();
-        ea.Mutation();
-        ea.NextGenerationSelection();
+        ea.InitializePopulation();
         ea.EvaluatePopulation();
-    } while (!EA::ShouldTerminate());
+
+        do {
+            ea.ParentSelection();
+            ea.Recombination();
+            ea.Mutation();
+            ea.NextGenerationSelection();
+            ea.EvaluatePopulation();
+        } while (!ea.ShouldTerminate());
+    }
 
     return 0;
 }
