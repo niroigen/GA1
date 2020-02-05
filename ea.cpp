@@ -67,6 +67,8 @@ void EA::Recombination() {
                 offsprings[i] = Individual(parent2.getX1(), parent2.getX2());
             }
         }
+
+        offsprings[i].setParents(parent1.getX1(), parent1.getX2(), parent2.getX1(), parent2.getX2());
     }
 }
 
