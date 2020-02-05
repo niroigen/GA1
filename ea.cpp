@@ -82,13 +82,13 @@ void EA::Mutation() {
 
             float averageRelativeDistance = (relativeDistanceX1 + relativeDistanceX2)/ 2;
 
-            float radiusOfCluster = 0.4;
+            float radiusOfCluster = 0.5;
 
             float new_x1 = Helper::randomX1();
             float new_x2 = Helper::randomX2();
 
             if (averageRelativeDistance > radiusOfCluster) {
-                double random_roll = (double) rand() / (RAND_MAX);
+                random_roll = (double) rand() / (RAND_MAX);
 
                 if (random_roll < 0.5) {
                     new_x1 = offsprings[i].getParent1X1();
