@@ -2,7 +2,7 @@
 
 void EA::InitializePopulation() {
     for (int i = 0; i < POPULATION_SIZE; i++) {
-        population[i] = Individual(Helper::randomX1(), Helper::randomX2());
+        this->population[i] = Individual(Helper::randomX1(), Helper::randomX2());
     }
 }
 
@@ -67,6 +67,8 @@ void EA::Recombination() {
                 offsprings[i] = Individual(parent2.getX1(), parent2.getX2());
             }
         }
+
+        offsprings[i].setParents(parent1.getX1(), parent1.getX2(), parent2.getX1(), parent2.getX2());
     }
 }
 
@@ -75,11 +77,30 @@ void EA::Mutation() {
         double random_roll = (double) rand() / (RAND_MAX);
 
         if (random_roll < MUTATION_RATE) {
+            float relativeDistanceX1 = std::abs(offsprings[i].getParent1X1() - offsprings[i].getParent2X1()) / (Helper::X1_MAX - Helper::X1_MIN);
+            float relativeDistanceX2 = std::abs(offsprings[i].getParent1X2() - offsprings[i].getParent2X2()) / (Helper::X2_MAX - Helper::X2_MIN);
+
+            float averageRelativeDistance = (relativeDistanceX1 + relativeDistanceX2)/ 2;
+
+            float radiusOfCluster = 0.4;
+
             float new_x1 = Helper::randomX1();
             float new_x2 = Helper::randomX2();
 
-            offsprings[i].setX1((offsprings[i].getX1() + new_x1) / 2);
-            offsprings[i].setX2((offsprings[i].getX2() + new_x2) / 2);
+            if (averageRelativeDistance > radiusOfCluster) {
+                double random_roll = (double) rand() / (RAND_MAX);
+
+                if (random_roll < 0.5) {
+                    new_x1 = offsprings[i].getParent1X1();
+                    new_x2 = offsprings[i].getParent1X2();
+                } else {
+                    new_x1 = offsprings[i].getParent2X1();
+                    new_x2 = offsprings[i].getParent2X2();
+                }
+            }
+
+            offsprings[i].setX1(new_x1);
+            offsprings[i].setX2(new_x2);
         }
     }
 }

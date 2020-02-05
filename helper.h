@@ -5,13 +5,13 @@
 #include <stdlib.h>
 #include <iostream>
 
-const float X1_MIN = -12;
-const float X1_MAX = 12;
-const float X2_MIN = -6;
-const float X2_MAX = 6;
-
 class Helper {
 public:
+    constexpr static float X1_MIN = -12;
+    constexpr static float X1_MAX = 12;
+    constexpr static float X2_MIN = -6;
+    constexpr static float X2_MAX = 6;
+
     static float functionOutput(float x1, float x2);
 
     static float randomX1();
