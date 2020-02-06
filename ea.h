@@ -15,7 +15,7 @@ static const int MAX_PARENT_SIZE = 200;
 static const int MAX_OFFSPRING_SIZE = 400;
 static const int MAX_GENERATIONS = 2000;
 static const float MUTATION_RATE = 0.65;
-static const float RECOMBINATION_RATE = 0.8;
+static const float RECOMBINATION_RATE = 0.7;
 
 class EA {
 private:
