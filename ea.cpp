@@ -2,7 +2,7 @@
 
 void EA::InitializePopulation() {
     for (int i = 0; i < POPULATION_SIZE; i++) {
-        population[i] = Individual(Helper::randomX1(), Helper::randomX2());
+        this->population[i] = Individual(Helper::randomX1(), Helper::randomX2());
     }
 }
 
