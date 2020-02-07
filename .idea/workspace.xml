@@ -11,13 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21b0ea78-4024-4914-aaae-04a374e0c917" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GA1.dir/ea.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GA1.dir/ea.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GA1.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/GA1.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/GA1" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/GA1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ea.h" beforeDir="false" afterPath="$PROJECT_DIR$/ea.h" afterDir="false" />
-    </list>
+    <list default="true" id="98628078-9537-4213-9350-b367cebc4863" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,22 +74,22 @@
       <screen x="0" y="23" width="1440" height="794" />
     </state>
     <state width="522" height="466" key="DebuggerActiveHint/0.23.1440.794@0.23.1440.794" timestamp="1580869994499" />
-    <state width="1378" height="196" key="GridCell.Tab.0.bottom" timestamp="1580942206595">
+    <state width="1378" height="196" key="GridCell.Tab.0.bottom" timestamp="1581049075416">
       <screen x="0" y="23" width="1440" height="794" />
     </state>
-    <state width="1378" height="196" key="GridCell.Tab.0.bottom/0.23.1440.794@0.23.1440.794" timestamp="1580942206595" />
-    <state width="1378" height="196" key="GridCell.Tab.0.center" timestamp="1580942206593">
+    <state width="1378" height="196" key="GridCell.Tab.0.bottom/0.23.1440.794@0.23.1440.794" timestamp="1581049075416" />
+    <state width="1378" height="196" key="GridCell.Tab.0.center" timestamp="1581049075415">
       <screen x="0" y="23" width="1440" height="794" />
     </state>
-    <state width="1378" height="196" key="GridCell.Tab.0.center/0.23.1440.794@0.23.1440.794" timestamp="1580942206593" />
-    <state width="1378" height="196" key="GridCell.Tab.0.left" timestamp="1580942206592">
+    <state width="1378" height="196" key="GridCell.Tab.0.center/0.23.1440.794@0.23.1440.794" timestamp="1581049075415" />
+    <state width="1378" height="196" key="GridCell.Tab.0.left" timestamp="1581049075414">
       <screen x="0" y="23" width="1440" height="794" />
     </state>
-    <state width="1378" height="196" key="GridCell.Tab.0.left/0.23.1440.794@0.23.1440.794" timestamp="1580942206592" />
-    <state width="1378" height="196" key="GridCell.Tab.0.right" timestamp="1580942206594">
+    <state width="1378" height="196" key="GridCell.Tab.0.left/0.23.1440.794@0.23.1440.794" timestamp="1581049075414" />
+    <state width="1378" height="196" key="GridCell.Tab.0.right" timestamp="1581049075415">
       <screen x="0" y="23" width="1440" height="794" />
     </state>
-    <state width="1378" height="196" key="GridCell.Tab.0.right/0.23.1440.794@0.23.1440.794" timestamp="1580942206594" />
+    <state width="1378" height="196" key="GridCell.Tab.0.right/0.23.1440.794@0.23.1440.794" timestamp="1581049075415" />
     <state width="1378" height="173" key="GridCell.Tab.1.bottom" timestamp="1580870480532">
       <screen x="0" y="23" width="1440" height="794" />
     </state>
