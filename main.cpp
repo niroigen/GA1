@@ -1,9 +1,6 @@
 #include <iostream>
-#include <fstream>
 #include <cstdio>
 #include "ea.h"
-
-static const unsigned int SEED = 17;
 
 int main() {
     for (int i = 0; i < 15; i++) {
