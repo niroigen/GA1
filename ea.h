@@ -13,7 +13,6 @@
 static const int POPULATION_SIZE = 1000;
 static const int MAX_PARENT_SIZE = 100;
 static const int MAX_OFFSPRING_SIZE = 400;
-static int COUNTER = 0;
 static const int MAX_GENERATIONS = 5000;
 static const float MUTATION_RATE = 0.15;
 
@@ -26,6 +25,7 @@ private:
     std::array<float, MAX_GENERATIONS + 1> average;
     std::array<float, MAX_GENERATIONS + 1> maxFitness;
     float currentMaxFitness = 0;
+    int currentGeneration = 0;
 
     void Merge(int l, int m, int r);
 
@@ -44,7 +44,7 @@ public:
 
     void NextGenerationSelection();
 
-    static bool ShouldTerminate();
+    bool ShouldTerminate();
 
     void ShuffleArray();
 
