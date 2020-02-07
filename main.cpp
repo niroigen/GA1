@@ -3,8 +3,6 @@
 #include <cstdio>
 #include "ea.h"
 
-static const unsigned int SEED = 17;
-
 int main() {
     for (int i = 0; i < 15; i++) {
         std::string average = "average_" + std::to_string(i) + ".txt";
@@ -18,7 +16,6 @@ int main() {
         std::cout << i << std::endl;
         srand(i);
         EA ea(i);
-
         ea.InitializePopulation();
         ea.EvaluatePopulation();
 
