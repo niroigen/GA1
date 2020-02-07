@@ -11,9 +11,9 @@
 #include <fstream>
 
 static const int POPULATION_SIZE = 1000;
-static const int MAX_PARENT_SIZE = 300;
+static const int MAX_PARENT_SIZE = 350;
 static const int MAX_OFFSPRING_SIZE = 800;
-static const int MAX_GENERATIONS = 1500;
+static const int MAX_GENERATIONS = 1000;
 static const float MUTATION_RATE = 0.4;
 static const float RECOMBINATION_RATE = 0.7;
 
